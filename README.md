@@ -53,3 +53,14 @@ I am a data scientist with expertise in machine learning, statistical analysis, 
 [Similar structure]
 
 
+Portfolio Website
+├── Home (index.html)
+├── About (about.html)
+├── Projects (projects.html)
+├── Contact (contact.html)
+└── Individual Project Pages
+    ├── project1.html
+    ├── project2.html
+    └── project3.html
+
+
