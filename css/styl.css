@@ -1,1 +1,86 @@
+.contact-footer {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+    text-align: center;
+}
 
+.contact-footer h3 {
+    color: #3498db;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.contact-footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-icon {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.contact-item a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #5dade2;
+    text-decoration: underline;
+}
+
+.contact-item span {
+    font-size: 0.9em;
+    color: #bdc3c7;
+}
+
+.footer-cta {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #34495e;
+}
+
+.footer-cta p {
+    margin-bottom: 15px;
+    color: #ecf0f1;
+}
+
+.footer-contact-btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.footer-contact-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .contact-footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
