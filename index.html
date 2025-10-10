@@ -9,15 +9,21 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Sarah Yawn</a>
+            
+            <button class="nav-toggle" onclick="toggleNav()">☰</button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
     </nav>
     
-    <!-- Your existing home page content -->
+    <!-- home page content -->
     <div class="container">
         <header class="hero">
             <h1>Sarah Yawn</h1>
