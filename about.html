@@ -6,21 +6,165 @@
     <title>About - Sarah Yawn | Data Scientist & Software Developer</title>
     <link rel="stylesheet" href="css/styl.css">
 
-    
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
             background-color: #f8f9fa;
         }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #2c3e50;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-link:hover {
+            background-color: #34495e;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            list-style: none;
+            padding: 0;
+            margin-top: 0.5rem;
+            z-index: 1000;
+            border-radius: 4px;
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #2c3e50;
+                padding: 1rem 0;
+                gap: 0;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                background-color: #34495e;
+                margin-top: 0;
+            }
+
+            .dropdown-menu a {
+                color: white;
+                padding-left: 32px;
+            }
+
+            .dropdown-menu a:hover {
+                background-color: #2c3e50;
+            }
+
+            .dropdown .dropdown-menu {
+                display: block;
+            }
+        }
         
+        /* Page Content */
         .container {
-            background-color: white;
+            max-width: 800px;
+            margin: 40px auto;
             padding: 40px;
+            background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -132,57 +276,88 @@
         .resume-btn:hover {
             background-color: #2980b9;
         }
+
+        /* Footer Styles */
+        .contact-footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-footer h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .contact-footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-item a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #5dade2;
+        }
+
+        .contact-item span {
+            color: #ecf0f1;
+            font-size: 0.9rem;
+        }
+
+        .footer-cta {
+            margin-top: 30px;
+        }
+
+        .footer-cta p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-contact-btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .footer-contact-btn:hover {
+            background-color: #2980b9;
+        }
         
         @media (max-width: 600px) {
             .container {
                 padding: 20px;
+                margin: 20px;
             }
             
             .skills-grid {
                 grid-template-columns: 1fr;
             }
         }
-        /* Dropdown container */
-    .dropdown {
-        position: relative;
-        }
-
-    /* Dropdown menu - hidden by default */
-    .dropdown-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #fff;
-        min-width: 160px;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        z-index: 1000;
-    }
-
-    /* Dropdown links */
-    .dropdown-menu li {
-        margin: 0;
-    }
-
-    .dropdown-menu a {
-        display: block;
-        padding: 12px 16px;
-        text-decoration: none;
-        color: #333;
-    }
-
-    .dropdown-menu a:hover {
-        background-color: #f1f1f1;
-    }
-
-    /* Show dropdown on hover */
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-
     </style>
 </head>
 
@@ -209,7 +384,7 @@
             </ul>
         </div>
     </nav>
-<body>
+
     <div class="container">
         <h1>About Me</h1>
         
@@ -314,6 +489,13 @@
             <a href="contact.html" class="footer-contact-btn">Get In Touch</a>
         </div>
     </footer>
-</body>   
+
+    <script>
+        function toggleNav() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
+
