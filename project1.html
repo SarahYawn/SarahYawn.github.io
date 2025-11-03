@@ -6,7 +6,6 @@
 <title>Projects - Sarah Yawn | Data Science Portfolio</title>
 <link rel="stylesheet" href="css/styl.css">
 <style>
-/* [Previous CSS styles remain the same] */
 body {
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 line-height: 1.6;
@@ -163,6 +162,67 @@ color: #555;
 color: #2c3e50;
 margin-top: 20px;
 margin-bottom: 10px;
+}
+
+.metadata {
+background-color: #f8f9fa;
+padding: 15px;
+border-radius: 5px;
+margin-bottom: 20px;
+font-size: 0.9em;
+}
+
+.metadata p {
+margin: 5px 0;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+position: relative;
+}
+
+.dropdown-menu {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: white;
+min-width: 180px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+z-index: 1000;
+list-style: none;
+padding: 0;
+margin: 0;
+border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+
+.dropdown-menu li {
+padding: 0;
+}
+
+.dropdown-menu li a {
+display: block;
+padding: 12px 20px;
+color: #333;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+background-color: #3498db;
+color: white;
+}
+
+.dropdown-menu li:first-child a {
+border-radius: 4px 4px 0 0;
+}
+
+.dropdown-menu li:last-child a {
+border-radius: 0 0 4px 4px;
 }
 </style>
 </head>
