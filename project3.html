@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project 2 - Sarah Yawn | Data Science Portfolio</title>
+<link rel="stylesheet" href="css/styl.css">
+<style>
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: #333;
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+background-color: #f8f9fa;
+}
+
+.container {
+background-color: white;
+padding: 40px;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+color: #2c3e50;
+border-bottom: 3px solid #3498db;
+padding-bottom: 10px;
+margin-bottom: 30px;
+text-align: center;
+}
+
+.projects-intro {
+text-align: center;
+background-color: #ecf0f1;
+padding: 20px;
+border-radius: 8px;
+border-left: 4px solid #3498db;
+margin-bottom: 40px;
+}
+
+.project-card {
+background-color: #f8f9fa;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+margin-bottom: 30px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-header {
+background: linear-gradient(135deg, #3498db, #2980b9);
+color: white;
+padding: 20px;
+}
+
+.project-header h3 {
+margin: 0 0 10px 0;
+font-size: 1.4em;
+}
+
+.project-type {
+background-color: rgba(255, 255, 255, 0.2);
+padding: 5px 15px;
+border-radius: 15px;
+font-size: 0.9em;
+display: inline-block;
+}
+
+.project-content {
+padding: 25px;
+}
+
+.project-description {
+margin-bottom: 20px;
+color: #34495e;
+}
+
+.tech-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+margin-bottom: 15px;
+}
+
+.tech-tag {
+background-color: #e8f4f8;
+color: #2980b9;
+padding: 4px 12px;
+border-radius: 15px;
+font-size: 0.85em;
+font-weight: 500;
+}
+
+.key-findings {
+background-color: #d5f4e6;
+border-left: 4px solid #27ae60;
+padding: 15px;
+margin-bottom: 20px;
+border-radius: 0 5px 5px 0;
+}
+
+.key-findings h4 {
+color: #27ae60;
+margin: 0 0 10px 0;
+font-size: 1em;
+}
+
+.project-links {
+display: flex;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+.project-link {
+display: inline-block;
+padding: 10px 20px;
+text-decoration: none;
+border-radius: 5px;
+font-weight: 500;
+transition: all 0.3s ease;
+text-align: center;
+flex: 1;
+min-width: 120px;
+}
+
+.notebook-link {
+background-color: #ff6b35;
+color: white;
+}
+
+.notebook-link:hover {
+background-color: #e55a2b;
+}
+
+.github-link {
+background-color: #333;
+color: white;
+}
+
+.github-link:hover {
+background-color: #555;
+}
+
+.technical-aspects ul {
+margin: 10px 0;
+padding-left: 20px;
+}
+
+.technical-aspects li {
+margin: 8px 0;
+color: #555;
+}
+
+.technical-aspects h4 {
+color: #2c3e50;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+
+.metadata {
+background-color: #f8f9fa;
+padding: 15px;
+border-radius: 5px;
+margin-bottom: 20px;
+font-size: 0.9em;
+}
+
+.metadata p {
+margin: 5px 0;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+position: relative;
+}
+
+.dropdown-menu {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: white;
+min-width: 180px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+z-index: 1000;
+list-style: none;
+padding: 0;
+margin: 0;
+border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+
+.dropdown-menu li {
+padding: 0;
+}
+
+.dropdown-menu li a {
+display: block;
+padding: 12px 20px;
+color: #333;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+background-color: #3498db;
+color: white;
+}
+
+.dropdown-menu li:first-child a {
+border-radius: 4px 4px 0 0;
+}
+
+.dropdown-menu li:last-child a {
+border-radius: 0 0 4px 4px;
+}
+</style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Sarah Yawn</a>
+        
+            <button class="nav-toggle" onclick="toggleNav()">☰</button>
+        
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li class="dropdown">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="project1.html">Project 1</a></li>
+                        <li><a href="project2.html">Project 2</a></li>
+                        <li><a href="project3.html">Project 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+<div class="container">
+<h1>Project 2: Sentiment Analysis</h1>
+
+<div class="project-card">
+<div class="project-header">
+<h3>Sentiment Analysis using NLTK and SpaCy</h3>
+<span class="project-type">Natural Language Processing & Text Analysis</span>
+</div>
+<div class="project-content">
+<div class="metadata">
+<p><strong>Author:</strong> Sarah Yawn</p>
+<p><strong>Date:</strong> July 17, 2025</p>
+<p><strong>Assignment:</strong> 7.1</p>
+<p><strong>Data Source:</strong> <a href="https://www.kaggle.com/datasets/nelgiriyewithana/emotions" target="_blank">Kaggle - Emotions Dataset</a></p>
+</div>
+
+<div class="project-description">
+<p>This project explores sentiment analysis and natural language processing using two powerful Python libraries: NLTK (Natural Language Toolkit) and SpaCy. The analysis is performed on an emotions dataset containing text labeled with six sentiment categories: sadness (0), joy (1), love (2), anger (3), fear (4), and surprise (5). The project demonstrates both sentiment intensity analysis using VADER and advanced linguistic analysis including Named Entity Recognition (NER), noun phrase extraction, token-level analysis, and dependency parsing visualization.</p>
+</div>
+
+<div class="technical-aspects">
+<h4>Technologies & Libraries:</h4>
+<div class="tech-tags">
+<span class="tech-tag">Python</span>
+<span class="tech-tag">NLTK</span>
+<span class="tech-tag">SpaCy</span>
+<span class="tech-tag">Pandas</span>
+<span class="tech-tag">KaggleHub</span>
+<span class="tech-tag">Google Colab</span>
+<span class="tech-tag">VADER Sentiment Analyzer</span>
+<span class="tech-tag">en_core_web_sm</span>
+</div>
+
+<h4>Technical Concepts Demonstrated:</h4>
+<ul>
+<li><strong>Sentiment Analysis with NLTK:</strong> Implementation of VADER (Valence Aware Dictionary and sEntiment Reasoner) sentiment intensity analyzer to calculate polarity scores including negative, neutral, positive, and compound sentiment scores; interpretation of compound scores to classify overall sentiment as Positive (≥0.05), Negative (≤-0.05), or Neutral</li>
+<li><strong>Data Acquisition:</strong> Automated dataset download using KaggleHub API; dynamic CSV file discovery through directory traversal; random text selection for analysis demonstrating reproducible research practices</li>
+<li><strong>Named Entity Recognition (NER):</strong> SpaCy's entity extraction to identify and classify named entities such as persons, organizations, locations, dates, and numerical values in text; analysis of entity types and frequencies</li>
+<li><strong>Noun Phrase Extraction:</strong> Identification and extraction of noun chunks using SpaCy's syntactic parser; analysis of subject matter and themes through noun phrase frequency</li>
+<li><strong>Token-Level Linguistic Analysis:</strong> Detailed examination of individual tokens including lemmatization (base form), Part-of-Speech (POS) tagging, fine-grained tag classification, dependency relations, and word shape analysis</li>
+<li><strong>Dependency Parsing:</strong> Visualization of grammatical relationships between words using SpaCy's displacy module; creation of interactive dependency parse trees showing subject-verb-object relationships and modifiers</li>
+<li><strong>Theme Identification:</strong> Custom algorithm combining named entities and noun phrases with frequency counting to identify prevalent themes and topics in text; ranking of keywords by occurrence</li>
+</ul>
+
+<h4>Analytical Methods:</h4>
+<ul>
+<li><strong>VADER Polarity Scoring:</strong> Calculated sentiment scores showing negative (0.268), neutral (0.732), positive (0.0), and compound (-0.4449) values for sample text "i couldnt feel any divine being in my own pulse"; comparison with dataset label (joy=1) revealing potential mislabeling in source data</li>
+<li><strong>Comparative Analysis:</strong> Human interpretation aligned with VADER's negative sentiment classification rather than dataset's joy label, suggesting NLTK's robust sentiment detection capabilities for complex emotional expressions</li>
+<li><strong>Entity Analysis:</strong> Extracted entities with type classification (e.g., "one" as CARDINAL number); empty entity results for certain texts indicating subjective, introspective content without external references</li>
+<li><strong>Noun Phrase Frequency:</strong> Identified recurring pronouns ("i" appearing twice) and key concepts ("a post", "marriage") suggesting personal narrative and self-referential themes</li>
+<li><strong>Syntactic Relationship Mapping:</strong> Dependency parse revealed complex sentence structures with multiple clauses, auxiliary verbs, and complementation patterns including ROOT verb "avoided", subject "i", and complement clauses with "because" conjunction</li>
+<li><strong>Theme Extraction Results:</strong> Top themes from sample text "i have avoided writing a post about marriage because i feel inadequate to write one
