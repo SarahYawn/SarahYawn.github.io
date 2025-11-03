@@ -1,17 +1,81 @@
-timent Analysis<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarah Yawn - Data Scientist & Software Developer</title>
+    <title>Projects - Sarah Yawn | Data Scientist & Software Developer</title>
     <link rel="stylesheet" href="css/styl.css">
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #2c3e50;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-link:hover {
+            background-color: #34495e;
+        }
+
+        /* Dropdown Styles */
         .dropdown {
             position: relative;
-            }
+        }
 
-        /* Dropdown menu - hidden by default */
         .dropdown-menu {
             display: none;
             position: absolute;
@@ -22,11 +86,11 @@ timent Analysis<!DOCTYPE html>
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin-top: 0.5rem;
             z-index: 1000;
+            border-radius: 4px;
         }
 
-        /* Dropdown links */
         .dropdown-menu li {
             margin: 0;
         }
@@ -36,17 +100,230 @@ timent Analysis<!DOCTYPE html>
             padding: 12px 16px;
             text-decoration: none;
             color: #333;
+            transition: background-color 0.3s ease;
         }
 
         .dropdown-menu a:hover {
             background-color: #f1f1f1;
         }
 
-        /* Show dropdown on hover */
         .dropdown:hover .dropdown-menu {
             display: block;
         }
 
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #2c3e50;
+                padding: 1rem 0;
+                gap: 0;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                background-color: #34495e;
+                margin-top: 0;
+            }
+
+            .dropdown-menu a {
+                color: white;
+                padding-left: 32px;
+            }
+
+            .dropdown-menu a:hover {
+                background-color: #2c3e50;
+            }
+
+            .dropdown .dropdown-menu {
+                display: block;
+            }
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px 20px;
+        }
+
+        main h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #3498db;
+            display: block;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .project-card h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .project-card p {
+            color: #555;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Alternate border colors for visual variety */
+        .project-card:nth-child(1) {
+            border-left-color: #3498db;
+        }
+
+        .project-card:nth-child(2) {
+            border-left-color: #27ae60;
+        }
+
+        .project-card:nth-child(3) {
+            border-left-color: #e74c3c;
+        }
+
+        /* Footer Styles */
+        .contact-footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-footer h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .contact-footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-item a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #5dade2;
+        }
+
+        .contact-item span {
+            color: #ecf0f1;
+            font-size: 0.9rem;
+        }
+
+        .footer-cta {
+            margin-top: 30px;
+        }
+
+        .footer-cta p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-contact-btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .footer-contact-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            main {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            main h1 {
+                font-size: 1.8rem;
+            }
+        }
     </style>
 </head>
 
@@ -64,9 +341,9 @@ timent Analysis<!DOCTYPE html>
                 <li class="dropdown">
                     <a href="projects.html" class="nav-link">Projects</a>
                     <ul class="dropdown-menu">
-                        <li><a href="project1.html">Project 1</a></li>
-                        <li><a href="project2.html">Project 2</a></li>
-                        <li><a href="project3.html">Project 3</a></li>
+                        <li><a href="project1.html">Weather Prediction</a></li>
+                        <li><a href="project2.html">Sentiment Analysis</a></li>
+                        <li><a href="project3.html">Tuberculosis Analysis</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -80,30 +357,30 @@ timent Analysis<!DOCTYPE html>
         <p class="subtitle">Explore my data science and machine learning projects</p>
 
         <div class="projects-grid">
-            <!-- Project 1: Tuberculosis Analysis -->
+            <!-- Project 1: Wisconsin Weather Prediction -->
             <a href="project1.html" class="project-card">
+                <div class="project-icon">🌤️</div>
+                <h2>Wisconsin Weather Prediction</h2>
+                <p>Machine learning model for predicting hourly precipitation in Wisconsin using 854,646+ observations with Random Forest algorithms and interactive Dash deployment.</p>
+            </a>
+
+            <!-- Project 2: Sentiment Analysis -->
+            <a href="project2.html" class="project-card">
+                <div class="project-icon">✍️</div>
+                <h2>Sentiment Analysis</h2>
+                <p>Analyze and group training data using SpaCy topic modeling and NLTK polarity scoring to classify emotions and sentiments in text data.</p>
+            </a>
+
+            <!-- Project 3: Tuberculosis Analysis -->
+            <a href="project3.html" class="project-card">
                 <div class="project-icon">🔬</div>
                 <h2>Tuberculosis Analysis</h2>
                 <p>In-depth analysis of tuberculosis data using statistical methods and data visualization techniques to identify patterns and trends in disease prevalence.</p>
             </a>
-
-            <!-- Project 2: Wisconsin Weather Prediction -->
-            <a href="project2.html" class="project-card">
-                <div class="project-icon">🌤️</div>
-                <h2>Wisconsin Weather Prediction</h2>
-                <p>Machine learning model for predicting weather patterns in Wisconsin using historical climate data and advanced forecasting algorithms.</p>
-            </a>
-
-            <!-- Project 3: Text Generation -->
-            <a href="project3.html" class="project-card">
-                <div class="project-icon">✍️</div>
-                <h2>Sentiment Analysis</h2>
-                <p>Analyze and group training data using SpaCy topic modeling and NLTK polarity scoring</p>
-            </a>
         </div>
     </main>
 
-   <!-- Contact Footer -->
+    <!-- Contact Footer -->
     <footer class="contact-footer">
         <h3>Let's Connect</h3>
         <div class="contact-footer-content">
@@ -137,5 +414,13 @@ timent Analysis<!DOCTYPE html>
             <a href="contact.html" class="footer-contact-btn">Get In Touch</a>
         </div>
     </footer>
+
+    <script>
+        function toggleNav() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
+
