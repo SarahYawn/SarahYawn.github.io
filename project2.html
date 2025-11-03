@@ -1,261 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Sarah Yawn | Data Science Portfolio</title>
-    <link rel="stylesheet" href="css/styl.css">
-    <style>
-        /* [Previous CSS styles remain the same] */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f8f9fa;
-        }
-        
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        
-        .projects-intro {
-            text-align: center;
-            background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-            margin-bottom: 40px;
-        }
-        
-        .project-card {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .project-header {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-            padding: 20px;
-        }
-        
-        .project-header h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.4em;
-        }
-        
-        .project-type {
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.9em;
-            display: inline-block;
-        }
-        
-        .project-content {
-            padding: 25px;
-        }
-        
-        .project-description {
-            margin-bottom: 20px;
-            color: #34495e;
-        }
-        
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
-        
-        .tech-tag {
-            background-color: #e8f4f8;
-            color: #2980b9;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            font-weight: 500;
-        }
-        
-        .key-findings {
-            background-color: #d5f4e6;
-            border-left: 4px solid #27ae60;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 0 5px 5px 0;
-        }
-        
-        .key-findings h4 {
-            color: #27ae60;
-            margin: 0 0 10px 0;
-            font-size: 1em;
-        }
-        
-        .project-links {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .project-link {
-            display: inline-block;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            text-align: center;
-            flex: 1;
-            min-width: 120px;
-        }
-        
-        .notebook-link {
-            background-color: #ff6b35;
-            color: white;
-        }
-        
-        .notebook-link:hover {
-            background-color: #e55a2b;
-        }
-        
-        .github-link {
-            background-color: #333;
-            color: white;
-        }
-        
-        .github-link:hover {
-            background-color: #555;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - Sarah Yawn | Data Science Portfolio</title>
+<link rel="stylesheet" href="css/styl.css">
+<style>
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: #333;
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+background-color: #f8f9fa;
+}
+
+.container {
+background-color: white;
+padding: 40px;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+color: #2c3e50;
+border-bottom: 3px solid #3498db;
+padding-bottom: 10px;
+margin-bottom: 30px;
+text-align: center;
+}
+
+.projects-intro {
+text-align: center;
+background-color: #ecf0f1;
+padding: 20px;
+border-radius: 8px;
+border-left: 4px solid #3498db;
+margin-bottom: 40px;
+}
+
+.project-card {
+background-color: #f8f9fa;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+margin-bottom: 30px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-header {
+background: linear-gradient(135deg, #3498db, #2980b9);
+color: white;
+padding: 20px;
+}
+
+.project-header h3 {
+margin: 0 0 10px 0;
+font-size: 1.4em;
+}
+
+.project-type {
+background-color: rgba(255, 255, 255, 0.2);
+padding: 5px 15px;
+border-radius: 15px;
+font-size: 0.9em;
+display: inline-block;
+}
+
+.project-content {
+padding: 25px;
+}
+
+.project-description {
+margin-bottom: 20px;
+color: #34495e;
+}
+
+.tech-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+margin-bottom: 15px;
+}
+
+.tech-tag {
+background-color: #e8f4f8;
+color: #2980b9;
+padding: 4px 12px;
+border-radius: 15px;
+font-size: 0.85em;
+font-weight: 500;
+}
+
+.key-findings {
+background-color: #d5f4e6;
+border-left: 4px solid #27ae60;
+padding: 15px;
+margin-bottom: 20px;
+border-radius: 0 5px 5px 0;
+}
+
+.key-findings h4 {
+color: #27ae60;
+margin: 0 0 10px 0;
+font-size: 1em;
+}
+
+.project-links {
+display: flex;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+.project-link {
+display: inline-block;
+padding: 10px 20px;
+text-decoration: none;
+border-radius: 5px;
+font-weight: 500;
+transition: all 0.3s ease;
+text-align: center;
+flex: 1;
+min-width: 120px;
+}
+
+.notebook-link {
+background-color: #ff6b35;
+color: white;
+}
+
+.notebook-link:hover {
+background-color: #e55a2b;
+}
+
+.github-link {
+background-color: #333;
+color: white;
+}
+
+.github-link:hover {
+background-color: #555;
+}
+
+.technical-aspects ul {
+margin: 10px 0;
+padding-left: 20px;
+}
+
+.technical-aspects li {
+margin: 8px 0;
+color: #555;
+}
+
+.technical-aspects h4 {
+color: #2c3e50;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+
+.metadata {
+background-color: #f8f9fa;
+padding: 15px;
+border-radius: 5px;
+margin-bottom: 20px;
+font-size: 0.9em;
+}
+
+.metadata p {
+margin: 5px 0;
+}
+</style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="nav-brand">Sarah Yawn</a>
-            
-            <button class="nav-toggle" onclick="toggleNav()">☰</button>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container">
-        <h1>Data Science Projects</h1>
-        
-        <div class="projects-intro">
-            <p>A collection of data science projects demonstrating various analytical techniques, machine learning algorithms, and data visualization methods using Python and Jupyter notebooks.</p>
-        </div>
+<nav>
+<div class="nav-container">
+<a href="index.html" class="nav-brand">Sarah Yawn</a>
 
-        <!-- Project 1 -->
-        <div class="project-card">
-            <div class="project-header">
-                <h3>Project 1: [Insert Actual Title]</h3>
-                <span class="project-type">Jupyter Notebook Analysis</span>
-            </div>
-            <div class="project-content">
-                <div class="project-description">
-                    <p>[Insert description of what Project 1 analyzes - e.g., "Exploratory data analysis of customer behavior patterns using statistical methods and visualization techniques."]</p>
-                </div>
-                
-                <div class="technical-aspects">
-                    <h4>Technologies & Libraries:</h4>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">NumPy</span>
-                        <span class="tech-tag">Matplotlib</span>
-                        <span class="tech-tag">Seaborn</span>
-                        <!-- Add actual libraries used -->
-                    </div>
-                    
-                    <h4>Technical Concepts Demonstrated:</h4>
-                    <ul>
-                        <li>[e.g., Data Cleaning and Preprocessing]</li>
-                        <li>[e.g., Exploratory Data Analysis]</li>
-                        <li>[e.g., Statistical Analysis]</li>
-                        <li>[e.g., Data Visualization]</li>
-                        <!-- Add actual concepts from the notebook -->
-                    </ul>
-                </div>
-                
-                <div class="key-findings">
-                    <h4>Key Insights:</h4>
-                    <p>[Insert main findings or conclusions from Project 1]</p>
-                </div>
-                
-                <div class="project-links">
-                    <a href="https://github.com/SarahYawn/Sarah-Yawn.github.io/blob/main/Project%201.ipynb" class="project-link notebook-link" target="_blank">
-                        📓 View Notebook
-                    </a>
-                    <a href="https://github.com/SarahYawn/Sarah-Yawn.github.io" class="project-link github-link" target="_blank">
-                        📁 Repository
-                    </a>
-                </div>
-            </div>
-        </div>
+<button class="nav-toggle" onclick="toggleNav()">☰</button>
 
-        <!-- Add similar blocks for other projects -->
-        
-    </div>
-    <footer class="contact-footer">
-    <h3>Let's Connect</h3>
-    <div class="contact-footer-content">
-        <div class="contact-item">
-            <span class="contact-icon">📧</span>
-            <a href="mailto:sarahkateyawn@gmail.com">sarahkateyawn@gmail.com</a>
-            <span>Email me</span>
-        </div>
-        
-        <div class="contact-item">
-            <span class="contact-icon">📞</span>
-            <a href="tel:+15158656049">(515) 865-6049</a>
-            <span>Call me</span>
-        </div>
-        
-        <div class="contact-item">
-            <span class="contact-icon">📍</span>
-            <span>Des Moines, IA</span>
-            <span>Location</span>
-        </div>
-        
-        <div class="contact-item">
-            <span class="contact-icon">💼</span>
-            <a href="https://linkedin.com/in/sarah-yawn" target="_blank">LinkedIn</a>
-            <span>Connect professionally</span>
-        </div>
-    </div>
-    
-    <div class="footer-cta">
-        <p>Ready to discuss your next data project?</p>
-        <a href="contact.html" class="footer-contact-btn">Get In Touch</a>
-    </div>
-</footer>
+<ul class="nav-menu" id="nav-menu">
+<li><a href="index.html" class="nav-link">Home</a></li>
+<li><a href="about.html" class="nav-link">About</a></li>
+<li><a href="projects.html" class="nav-link">Projects</a></li>
+<li><a href="contact.html" class="nav-link">Contact</a></li>
+</ul>
+</div>
+</nav>
+<div class="container">
+<h1>Data Science Projects</h1>
 
-</body>
-</html>
+<div class="projects-intro">
+<p>A collection of data science projects demonstrating various analytical techniques, machine learning algorithms, and data visualization methods using Python and Jupyter notebooks.</p>
+</div>
+
+<!-- Project 2: Wisconsin Weather Prediction -->
+<div class="project-card">
+<div class="project-header">
+<h3>Project 1: Wisconsin Weather Precipitation Prediction</h3>
+<span class="project-type">Machine Learning & Interactive Dashboard</span>
+</div>
+<div class="project-content">
+<div class="metadata">
+<p><strong>Author:</strong> Sarah Yawn</p>
+<p><strong>Date:</strong> July 20, 2025</p>
+<p><strong>Data Source:</strong> <a href="https://www.kaggle.com/datasets/pizzarules6681/wisconsin-weather" target="_blank">Kaggle - Wisconsin Weather Dataset</a></p>
+</div>
+
+<div class="project-description">
+<p>Comprehensive machine learning application predicting hourly precipitation using weather data from three Wisconsin stations (Southern Wisconsin Regional Airport, Green Bay Austin Straubel International Airport, and Appleton International Airport). This project implements a complete ML pipeline including extensive data cleaning of 854,646 observations, feature engineering, model selection and tuning, and deployment through an interactive Dash application with real-time prediction capabilities and historical trend visualization.</p>
+</div>
+
+<div class="technical-aspects">
+<h4>Technologies & Libraries:</h4>
+<div class="tech-tags">
+<span class="tech-tag">Python</span>
+<span class="tech-tag">Pandas</span>
+<span class="tech-tag">NumPy</span>
+<span class="tech-tag">Scikit-learn</span>
+<span class="tech-tag">Matplotlib</span>
+<span class="tech-tag">Seaborn</span>
+<span class="tech-tag">Plotly</span>
+<span class="tech-tag">Dash</span>
+<span class="tech-tag">Dash Bootstrap Components</span>
+<span class="tech-tag">SciPy</span>
+<span class="tech-tag">Google Colab</span>
+</div>
+
+<h4>Technical Concepts Demonstrated:</h4>
+<ul>
+<li><strong>Data Acquisition & Management:</strong> Google Drive integration for dataset access, handling multiple CSV files (2P2.csv, GRB.csv, ATW.csv) with automated concatenation and source tracking</li>
+<li><strong>Data Cleaning & Preprocessing:</strong> Comprehensive handling of 27 columns with missing values using median imputation for numerical features and mode for categorical features; datetime conversion for temporal analysis; removal of empty columns and handling mixed data types</li>
+<li><strong>Feature Engineering:</strong> Created Temperature_Humidity_Category feature combining temperature and dew point differentials; extracted temporal features (year, month, day, hour, dayofweek); implemented binning for top 5 correlated features using quantile-based categorization; applied Yeo-Johnson power transformation to 11 skewed numerical features</li>
+<li><strong>Exploratory Data Analysis:</strong> Statistical profiling across 30 features; distribution analysis via histograms and count plots; correlation matrix analysis revealing high correlations (tmpf-dwpf: 0.92, tmpf-feel: 0.98); identification of multicollinearity issues</li>
+<li><strong>Outlier Detection & Removal:</strong> Z-score analysis identifying outliers in wind speed, gust, and ice accretion variables; systematic removal of 27,064 rows (3.17%) exceeding Z-score threshold of 3; boxplot visualization for outlier identification</li>
+<li><strong>Feature Selection:</strong> Removed highly correlated redundant features (feel, mslp) based on correlation threshold >0.9; dropped high-cardinality categorical features (metar, peak_wind_time, wxcodes); one-hot encoding for remaining categorical variables resulting in 342 engineered features</li>
+<li><strong>Model Selection & Evaluation:</strong> Comparative analysis of Linear Regression, Gradient Boosting Regressor, and Random Forest Regressor using 3-fold cross-validation; Random Forest selected as best model with lowest CV MSE (0.6375)</li>
+<li><strong>Hyperparameter Tuning:</strong> RandomizedSearchCV implementation with 10 iterations testing n_estimators (50-150), max_depth (10, 20, None), min_samples_split (2, 5), min_samples_leaf (1, 2), and bootstrap options; optimal parameters: n_estimators=100, min_samples_split=5, min_samples_leaf=2, max_depth=None, bootstrap=True</li>
+<li><strong>Model Performance Assessment:</strong> Multiple evaluation metrics including MSE (0.598), R² (0.382), residual analysis, and feature importance ranking; visualization through actual vs. predicted scatter plots and residual distribution analysis</li>
+<li><strong>Interactive Dashboard Development:</strong> Dash application with Bootstrap components featuring real-time precipitation prediction interface, historical trend visualization, station-specific current conditions display, and dynamic feature input forms</li>
+<li><strong>Data Visualization:</strong> Comprehensive visualizations including correlation heatmaps, feature importance bar charts, residual plots, distribution histograms, and time-series line graphs using Matplotlib, Seaborn, and Plotly</li>
+</ul>
+
+<h4>Analytical Methods:</h4>
+<ul>
+<li><strong>Correlation Analysis:</strong> Pearson correlation matrix revealing strongest predictors of precipitation: relative humidity (0.227), dew point (0.059), wind speed (0.056); identification of multicollinearity issues requiring feature removal</li>
+<li><strong>Statistical Testing:</strong> Z-score based outlier detection with threshold of 3 standard deviations; analysis of feature distributions to inform transformation strategies</li>
+<li><strong>Time Series Feature Engineering:</strong> Extraction of cyclical temporal patterns through year, month, day, hour, and day-of-week features; consideration of seasonal and daily patterns in weather data</li>
+<li><strong>Ensemble Learning:</strong> Random Forest implementation leveraging 100 decision trees with bootstrap aggregating; comparison with gradient boosting and linear models</li>
+<li><strong>Cross-Validation:</strong> 3-fold cross-validation for robust model evaluation; 80/20 train-test split (662,065 training samples, 165,517 test samples) for final performance assessment</li>
+<li><strong>Feature Importance Analysis:</strong> Identification of top predictive features: visibility (15.9%), relative humidity (13.1%), year (9.7%), hour (7.1%), wind direction (7.0%); insights informing model interpretation</li>
+<li><strong>Residual Analysis:</strong> Systematic evaluation of prediction errors revealing two distinct diagonal patterns in residual plots, indicating systematic model limitations and potential for binary classification approach</li>
+<li><strong>Distribution Analysis:</strong> Identification of bimodal distribution in actual precipitation values (concentrated at ~0 and ~4.5 transforme
