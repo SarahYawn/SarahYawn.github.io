@@ -175,6 +175,55 @@ font-size: 0.9em;
 .metadata p {
 margin: 5px 0;
 }
+
+/* Dropdown Menu Styles */
+.dropdown {
+position: relative;
+}
+
+.dropdown-menu {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: white;
+min-width: 180px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+z-index: 1000;
+list-style: none;
+padding: 0;
+margin: 0;
+border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+
+.dropdown-menu li {
+padding: 0;
+}
+
+.dropdown-menu li a {
+display: block;
+padding: 12px 20px;
+color: #333;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+background-color: #3498db;
+color: white;
+}
+
+.dropdown-menu li:first-child a {
+border-radius: 4px 4px 0 0;
+}
+
+.dropdown-menu li:last-child a {
+border-radius: 0 0 4px 4px;
+}
 </style>
 </head>
 <body>
@@ -264,3 +313,10 @@ margin: 5px 0;
 <li><strong>Feature Importance Analysis:</strong> Identification of top predictive features: visibility (15.9%), relative humidity (13.1%), year (9.7%), hour (7.1%), wind direction (7.0%); insights informing model interpretation</li>
 <li><strong>Residual Analysis:</strong> Systematic evaluation of prediction errors revealing two distinct diagonal patterns in residual plots, indicating systematic model limitations and potential for binary classification approach</li>
 <li><strong>Distribution Analysis:</strong> Identification of bimodal distribution in actual precipitation values (concentrated at ~0 and ~4.5 transforme
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
